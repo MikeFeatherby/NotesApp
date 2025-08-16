@@ -35,9 +35,11 @@ export default function Home() {
       if (!res.ok) throw new Error('Failed to add note');
       setContent('');
       await loadNotes();
-    } catch (err: any) {
-      setError(err.message ?? 'Something went wrong');
-    } finally {
+    } catch (err: unknown) {
+    const message =
+      err instanceof Error ? err.message : 'Something went wrong';
+    setError(message);
+  } finally {
       setLoading(false);
     }
   }
