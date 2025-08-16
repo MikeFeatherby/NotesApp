@@ -5,7 +5,7 @@ export default function AboutPage() {
       <p className="text-lg opacity-80">
         Built with Next.js + Tailwind. You’re editing files locally and seeing hot reloads.
       </p>
-      <a href="/" className="btn">← Back home</a>
+      
     </main>
   );
 }
